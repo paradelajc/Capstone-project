@@ -24,6 +24,9 @@ from rest_framework.permissions import IsAuthenticated
 # class BookingView(APIView):
 #   pass
 
+def index(requests):
+  return render(requests, 'index.html', {})
+
 class MenuItemsView(generics.ListCreateAPIView):
   permission_classes = [IsAuthenticated]
   queryset = MenuItem.objects.all()
